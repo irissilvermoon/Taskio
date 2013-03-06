@@ -7,6 +7,6 @@ Taskio is a management tool to help groups of people coordinate tasks.  Taskio u
 
 Features
 ========
-Join or create teams
-Add, claim and complete tasks for your team
-Remind teams of their tasks via SMS
+* Join or create teams
+* Add, claim and complete tasks for your team
+* Remind teams of their tasks via SMS
