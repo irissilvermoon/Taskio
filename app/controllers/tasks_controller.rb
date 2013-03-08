@@ -44,9 +44,10 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
+        format.html { redirect_to @task, notice: 'Your task has been created.' }
         format.json { render json: @task, status: :created, location: @task }
       else
+        flash[:alert] = "Your task was not created."
         format.html { render action: "new" }
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
@@ -60,7 +61,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
+        format.html { redirect_to @task, notice: 'Your task has been updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
