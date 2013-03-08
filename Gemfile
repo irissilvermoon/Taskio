@@ -25,15 +25,15 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
-  gem 'sqlite3', 'l.3.7'
-  gem 'rspec-rails', '~2.11'
-  gem 'pry', '~0.9'
+  gem 'sqlite3'
+  gem 'rspec-rails', '~> 2.11'
+  gem 'pry', '~> 0.9'
 end
 
 group :test do
-  'capybara', '1.1.2'
-  'factory_girl', '2.6.4'
-  'email_spec', '1.2.1'
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl', '2.6.4'
+  gem 'email_spec', '1.2.1'
 end
 
 group :production do
