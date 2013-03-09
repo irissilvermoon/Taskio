@@ -13,11 +13,11 @@
 
 <% @tasks.each do |task| %>
   <tr>
-    <td><%= task.title %></td>
+    <td><%= link_to task.title, task %></td>
     <td><%= task.description %></td>
     <td><%= task.priority %></td>
     <td><%= task.created_at %></td>
-    <td><%= link_to 'Show', task %></td>
+    <td><%= link_to 'Subtask', new_task_path(:parent_id => task) %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
