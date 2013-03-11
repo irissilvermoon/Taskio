@@ -1,8 +1,9 @@
 class TasksController < ApplicationController
-  # GET /tasks
-  # GET /tasks.json
+
+  before_filter :authenticate_user!
+
   def index
-    @tasks = Task.all
+    @tasks = current_user.tasks.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +25,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.json
   def new
-    @task = Task.new
+    @task = current_user.tasks.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +41,7 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(params[:task])
+    @task = current_user.tasks.build(params[:task])
 
     respond_to do |format|
       if @task.save

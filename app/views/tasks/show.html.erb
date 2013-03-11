@@ -1,9 +1,11 @@
 <!-- <p id="notice"><%= notice %></p> -->
-
-<p>
-  <b>Title:</b>
-  <%= @task.title %>
-</p>
+<div id='task'>
+  <p>
+    <b>Title:</b>
+    <%= @task.title %>
+    <span id='author'>Created by <%= @task.user.email %></span>
+  </p>
+</div>
 
 <p>
   <b>Description:</b>
