@@ -8,6 +8,7 @@ gem 'dynamic_form', '1.1.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'ancestry'
 
 
 # Gems used only for assets and not required
