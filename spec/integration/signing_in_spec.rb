@@ -8,6 +8,7 @@ feature 'Signing in' do
   scenario 'Signing in via confirmation' do
     open_email "example@taskio.com", :with_subject => /Confirmation/
     User.first.confirmation_token
+    current_email.body
     click_first_link_in_email
     page.should have_content("Your account was successfully confirmed")
     page.should have_content("Signed in as example@taskio.com")
