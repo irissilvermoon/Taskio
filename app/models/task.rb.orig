@@ -2,7 +2,10 @@ class Task < ActiveRecord::Base
   attr_accessible :created_at, :description, :priority,
                   :title, :parent_id
   validates :title, presence: true
+<<<<<<< HEAD
   validates :description, presence: true
-  belongs_to: user
+  belongs_to :user
+=======
   has_ancestry
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
 end

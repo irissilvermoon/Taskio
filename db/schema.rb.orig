@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130311054305) do
+=======
+
+ActiveRecord::Schema.define(:version => 20130308225239) do
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
 
   create_table "tasks", :force => true do |t|
     t.string   "title"
@@ -19,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130311054305) do
     t.integer  "priority"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+<<<<<<< HEAD
     t.integer  "user_id"
   end
 
@@ -41,11 +47,15 @@ ActiveRecord::Schema.define(:version => 20130311054305) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.string   "ancestry"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+=======
+    t.string   "ancestry"
+  end
+
   add_index "tasks", ["ancestry"], :name => "index_tasks_on_ancestry"
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
 
 end

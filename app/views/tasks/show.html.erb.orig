@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- <p id="notice"><%= notice %></p> -->
 <div id='task'>
   <p>
@@ -6,10 +7,18 @@
     <span id='author'>Created by <%= @task.user.email %></span>
   </p>
 </div>
+=======
+<div class="task">
+  <p>
+    <b>Title:</b>
+    <%= @task.title %>
+  </p>
+
   <p>
     <b>Description:</b>
     <%= @task.description %>
-
+  </p>
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
 
   <p>
     <b>Priority:</b>

@@ -9,6 +9,8 @@
 <body>
   <%= render 'layouts/header' %>
   <div class="container">
+
+<<<<<<< HEAD
 <nav>
   <% if user_signed_in? %>
      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
@@ -17,16 +19,10 @@
     <li><%= link_to "Sign in", new_user_session_path %></li>
     <% end %>
 </nav>
-    <% flash.each do |key, value| %>
-      <div class='flash' id='<% key %>'>
-        <%= value %>
-      </div>
-    <% end %>
-    <% end %>
 
- <%= yield %>
-
-    <%= render 'layouts/footer' %>
+<% flash.each do |key, value| %>
+  <div class='flash' id='<% key %>'>
+    <%= value %>
   </div>
 <% end %>
 <%= yield %>
@@ -39,5 +35,17 @@
     </div>
   </footer>
 
+=======
+    <% flash.each do |key, value| %>
+      <div class='flash' id='<% key %>'>
+        <%= value %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+    <%= render 'layouts/footer' %>
+  </div>
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
 </body>
 </html>
