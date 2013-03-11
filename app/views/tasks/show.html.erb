@@ -1,16 +1,16 @@
-<!-- <p id="notice"><%= notice %></p> -->
+<p id="notice"> </p>
 <div id='task'>
   <p>
     <b>Title:</b>
     <%= @task.title %>
-    <span id='author'>Created by <%= @task.user.email %></span>
   </p>
-</div>
+    <span id='author'>Created by <%= @task.user.email %></span>
+  </div>
+
   <p>
     <b>Description:</b>
     <%= @task.description %>
-
-
+  </p>
   <p>
     <b>Priority:</b>
     <%= @task.priority %>

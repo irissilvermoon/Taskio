@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(:version => 20130311054305) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.string   "ancestry"
   end
 
+  add_index "tasks", ["ancestry"], :name => "index_tasks_on_ancestry"
   add_index "tasks", ["user_id"], :name => "index_tasks_on_user_id"
 
   create_table "users", :force => true do |t|
@@ -41,11 +43,9 @@ ActiveRecord::Schema.define(:version => 20130311054305) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.string   "ancestry"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
-  add_index "tasks", ["ancestry"], :name => "index_tasks_on_ancestry"
 
 end

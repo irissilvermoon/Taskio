@@ -3,6 +3,6 @@ class Task < ActiveRecord::Base
                   :title, :parent_id
   validates :title, presence: true
   validates :description, presence: true
-  belongs_to: user
+  belongs_to :user
   has_ancestry
 end
