@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308225239) do
+ActiveRecord::Schema.define(:version => 20130308211432) do
 
   create_table "tasks", :force => true do |t|
     t.string   "title"
@@ -19,9 +19,6 @@ ActiveRecord::Schema.define(:version => 20130308225239) do
     t.integer  "priority"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.string   "ancestry"
   end
-
-  add_index "tasks", ["ancestry"], :name => "index_tasks_on_ancestry"
 
 end

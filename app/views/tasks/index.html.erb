@@ -1,21 +1,5 @@
 <h1>Listing tasks</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Priority</th>
-    <th>Created at</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-
-    <%= render @tasks %>
-
-</table>
-
-<br />
+<%= render @tasks %>
 
 <%= link_to 'New Task', new_task_path %>

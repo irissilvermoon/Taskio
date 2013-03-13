@@ -16,6 +16,7 @@ feature "Creating Tasks" do
   scenario "don't create an empty task" do
   click_button "Create Task"
   page.should have_content("Your task was not created.")
+  page.should have_content("Title can't be blank")
   end
 
 end
