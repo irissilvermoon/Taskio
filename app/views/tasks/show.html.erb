@@ -19,7 +19,7 @@
     <%= @task.created_at %>
   </p>
   <div class="actions">
-    <%= link_to 'Subtask', new_task_path(:parent_id => @task) %>
+    <!-- <%= link_to 'Subtask', new_task_path(:parent_id => @task) %> -->
     <%= link_to 'Edit', edit_task_path(@task) %> |
     <%= link_to 'Back', tasks_path %>
   </div>
