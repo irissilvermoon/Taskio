@@ -28,6 +28,8 @@ GEM
     activesupport (3.2.11)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    ancestry (1.3.0)
+      activerecord (>= 2.3.14)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.1.0.0)
@@ -39,11 +41,17 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
+<<<<<<< HEAD
     childprocess (0.3.7)
       ffi (~> 1.0, >= 1.0.6)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    coderay (1.0.8)
+=======
+    childprocess (0.3.9)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -56,7 +64,6 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
-    diff-lcs (1.1.3)
     diff-lcs (1.2.1)
     dynamic_form (1.1.4)
     email_spec (1.2.1)
@@ -67,6 +74,10 @@ GEM
       multi_json (~> 1.0)
     factory_girl (2.6.4)
       activesupport (>= 2.3.9)
+<<<<<<< HEAD
+    ffi (1.3.1)
+=======
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
     ffi (1.4.0)
     hike (1.2.1)
     i18n (0.6.4)
@@ -115,6 +126,36 @@ GEM
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
+<<<<<<< HEAD
+    rspec (2.11.0)
+      rspec-core (~> 2.11.0)
+      rspec-expectations (~> 2.11.0)
+      rspec-mocks (~> 2.11.0)
+    rspec (2.12.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+    rspec-core (2.11.1)
+    rspec-core (2.12.2)
+    rspec-expectations (2.11.3)
+      diff-lcs (~> 1.1.3)
+    rspec-expectations (2.12.1)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.11.3)
+    rspec-mocks (2.12.2)
+    rspec-rails (2.11.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.11.0)
+    rspec-rails (2.12.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+=======
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -125,26 +166,31 @@ GEM
     rspec-mocks (2.13.0)
     rspec-rails (2.13.0)
       actionpack (>= 3.0)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      railties (>= 3.0)
-      rspec (~> 2.11.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
     rubyzip (0.9.9)
     sass (3.2.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+<<<<<<< HEAD
     selenium-webdriver (2.29.0)
+=======
+    selenium-webdriver (2.31.0)
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
       childprocess (>= 0.2.5)
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+<<<<<<< HEAD
+    selenium-webdriver (2.31.0)
+=======
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
     slop (3.4.3)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -171,11 +217,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-=======
   ancestry
   bootstrap-sass (= 2.1)
->>>>>>> 72c02bca1b2996b0ac94f4e78ba16d5752e63486
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
   devise (~> 2.2)

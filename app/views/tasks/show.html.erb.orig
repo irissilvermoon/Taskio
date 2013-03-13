@@ -1,16 +1,25 @@
-<p id="notice"> </p>
+<<<<<<< HEAD
+<!-- <p id="notice"><%= notice %></p> -->
 <div id='task'>
   <p>
     <b>Title:</b>
     <%= @task.title %>
-  </p>
     <span id='author'>Created by <%= @task.user.email %></span>
-  </div>
+  </p>
+</div>
+=======
+<div class="task">
+  <p>
+    <b>Title:</b>
+    <%= @task.title %>
+  </p>
 
   <p>
     <b>Description:</b>
     <%= @task.description %>
   </p>
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
+
   <p>
     <b>Priority:</b>
     <%= @task.priority %>
@@ -21,7 +30,7 @@
     <%= @task.created_at %>
   </p>
   <div class="actions">
-    <!-- <%= link_to 'Subtask', new_task_path(:parent_id => @task) %> -->
+    <%= link_to 'Subtask', new_task_path(:parent_id => @task) %>
     <%= link_to 'Edit', edit_task_path(@task) %> |
     <%= link_to 'Back', tasks_path %>
   </div>

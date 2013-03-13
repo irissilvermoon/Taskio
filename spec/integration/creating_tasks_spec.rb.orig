@@ -20,7 +20,10 @@ feature "Creating Tasks" do
 
   scenario "create a task" do
     fill_in "Title", with: "Clean the house"
+<<<<<<< HEAD
     fill_in "Description", with: "Upstairs cleaning"
+=======
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
     click_button "Create Task"
     page.should have_content("Your task has been created.")
     within("#task #author") do
@@ -31,6 +34,5 @@ feature "Creating Tasks" do
   scenario "don't create an empty task" do
   click_button "Create Task"
   page.should have_content("Your task was not created.")
-  page.should have_content("Title can't be blank")
   end
 end

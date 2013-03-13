@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Taskio</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <div class="container">
+
+<<<<<<< HEAD
+<nav>
+  <% if user_signed_in? %>
+     <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+  <% else %>
+    <li><%= link_to "Sign up", new_user_registration_path %> %></li>
+    <li><%= link_to "Sign in", new_user_session_path %></li>
+    <% end %>
+</nav>
+
+<% flash.each do |key, value| %>
+  <div class='flash' id='<% key %>'>
+    <%= value %>
+  </div>
+<% end %>
+<%= yield %>
+
+  <footer>
+    <div class="container">
+      <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>
+      <% end %>
+    </div>
+  </footer>
+
+=======
+    <% flash.each do |key, value| %>
+      <div class='flash' id='<% key %>'>
+        <%= value %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+    <%= render 'layouts/footer' %>
+  </div>
+>>>>>>> d2d22f453d443a775fbc9125e1debaa915c7bcd5
+</body>
+</html>
