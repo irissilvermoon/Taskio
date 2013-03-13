@@ -23,6 +23,13 @@ en:
         subject: "Reset password instructions"
       unlock_instructions:
         subject: "Unlock Instructions"
+      invitation_instructions:
+        subject: "You've been invited to Taskio!"
+    invitations:
+        user:
+          send_instructions: "New user has been invited!"
+          invitation_token_invalid: "The invitation token provided is not valid!"
+          updated: "Welcome to Taskio! You are now signed in!"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."

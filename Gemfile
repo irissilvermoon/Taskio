@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'devise', '~> 2.2'
+gem 'devise_invitable', '~> 1.1.0'
 gem 'dynamic_form', '1.1.4'
 gem 'bootstrap-sass', '2.1'
 
@@ -28,7 +29,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 2.11'
+  gem 'rspec-rails', '~> 2.13.0'
   gem 'pry', '~> 0.9'
 end
 
