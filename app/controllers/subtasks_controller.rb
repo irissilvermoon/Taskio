@@ -37,8 +37,8 @@ class SubtasksController < ApplicationController
 
   def destroy
     @subtask.destroy
-    flash[:notice] = "Subtask has been deleted."
-    redirect_to task_path
+    flash[:notice] = "Your subtask has been deleted."
+    redirect_to tasks_path
   end
 
 private

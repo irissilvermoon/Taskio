@@ -2,8 +2,9 @@ require 'spec_helper'
 
 feature "Creating Tasks" do
 
+  let!(:task) { Factory(:task, :title => "House Cleaning") }
+
   before do
-    Factory(:task, :title => "House Cleaning")
     user = Factory(:user, :email => "example@taskio.com")
     user.confirm!
 
@@ -12,6 +13,7 @@ feature "Creating Tasks" do
     page.should have_content(message)
 
     sign_in_as!(user)
+    page.should have_content(task.title)
     page.should have_content("New Task")
     click_link "New Task"
   end

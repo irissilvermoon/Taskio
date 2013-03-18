@@ -1,0 +1,18 @@
+<ul id='subtask'>
+    <h2><%= @subtask.title %></h2>
+  <li>
+    <b>Description:</b>
+    <%= @subtask.description %>
+  </li>
+  <li>
+    <b>Priority:</b>
+    <%= @subtask.priority %>
+  </li>
+  <div class="actions">
+    <%= link_to 'Edit', edit_task_subtask_path %> |
+    <%= link_to 'Delete', [@task, @subtask],
+          method: :delete,
+          confirm: "Are you sure you want to delete this subtask?" %> |
+    <%= link_to 'Back', @subtask.task %>
+  </div>
+</ul>
