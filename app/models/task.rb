@@ -3,5 +3,7 @@ class Task < ActiveRecord::Base
                   :title
   validates :title, presence: true
 
+  has_many :subtasks
+
   belongs_to :user
 end

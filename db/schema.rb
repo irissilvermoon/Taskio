@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130311054305) do
+ActiveRecord::Schema.define(:version => 20130318042420) do
+
+  create_table "subtasks", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "priority"
+    t.datetime "created_at",  :null => false
+    t.integer  "task_id"
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "subtasks", ["task_id"], :name => "index_subtasks_on_task_id"
 
   create_table "tasks", :force => true do |t|
     t.string   "title"

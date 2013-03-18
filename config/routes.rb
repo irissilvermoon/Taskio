@@ -1,12 +1,13 @@
 Taskio::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
-
   get '/awaiting_confirmation',
     :to => "users#confirmation",
     :as => 'confirm_user'
 
   root :to => "tasks#index"
-  resources :tasks
+  resources :tasks do
+    resources :subtasks
+  end
 
 
   # The priority is based upon order of creation:
