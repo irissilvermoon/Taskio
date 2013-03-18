@@ -4,5 +4,6 @@ class Task < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
   belongs_to :user
+  belongs_to :task_list
   has_ancestry
 end

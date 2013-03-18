@@ -8,7 +8,7 @@ Taskio::Application.routes.draw do
   root :to => "dashboards#show"
   resource :dashboard, :only => 'show'
   resources :tasks
-  resources :groups
+  resources :task_lists
 
 
   # The priority is based upon order of creation:
