@@ -14,7 +14,7 @@ feature "Creating Tasks" do
     fill_in "Email", :with => "example@taskio.com"
     fill_in "Password", :with => "password"
     click_button "Sign in"
-    page.should have_content("New Task")
+    page.should have_content("New Task List")
     click_link "New Task"
   end
 
@@ -29,7 +29,7 @@ feature "Creating Tasks" do
   end
 
   scenario "don't create an empty task" do
-  click_button "Create Task"
-  page.should have_content("Your task was not created.")
+    click_button "Create Task"
+    page.should have_content("Your task was not created.")
   end
 end

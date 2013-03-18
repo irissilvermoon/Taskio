@@ -5,7 +5,7 @@ feature "Creating Nested Tasks" do
 
   before do
     sign_in_as!(user)
-    visit '/'
+    visit '/tasks'
     click_link "New Task"
     fill_in "Title", :with => "Clean the House"
     fill_in "Description", :with => "let's get this house clean"
