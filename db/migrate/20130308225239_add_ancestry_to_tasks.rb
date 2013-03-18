@@ -7,7 +7,5 @@ class AddAncestryToTasks < ActiveRecord::Migration
   def self.down
     remove_column :tasks, :ancestry
     remove_index :tasks, :ancestry
-
   end
-
 end
