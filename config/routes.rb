@@ -4,10 +4,12 @@ Taskio::Application.routes.draw do
     :to => "users#confirmation",
     :as => 'confirm_user'
 
-  root :to => "tasks#index"
+  root :to => "dashboards#show"
+  resource :dashboard, :only => 'show'
   resources :tasks do
     resources :subtasks
   end
+  resources :task_lists
 
 
   # The priority is based upon order of creation:
