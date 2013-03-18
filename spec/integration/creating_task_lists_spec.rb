@@ -13,6 +13,9 @@ feature 'creating task lists' do
     fill_in 'Name', :with => "My New Task list"
     click_button 'Create Task list'
     page.should have_content("Task list has been created.")
+    page.should have_content("My New Task list")
+
+    user.task_lists.count.should == 1
   end
 
   scenario "creating a task list with invalid parameters" do

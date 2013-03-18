@@ -5,9 +5,9 @@ class TaskListsController < ApplicationController
   end
 
   def create
-    @task_list = current_user.task_lists.build(params[:task_list])
+    @task_list = current_user.task_lists.create(params[:task_list])
 
-    if @task_list.save
+    if @task_list.persisted?
       redirect_to dashboard_path, :notice => "Task list has been created."
     else
       flash[:alert] = "Task list has not been created."
