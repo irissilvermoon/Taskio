@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'devise', '~> 2.2'
 gem 'dynamic_form', '1.1.4'
 gem 'bootstrap-sass', '2.1'
+gem 'cancan', '1.6.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,9 +28,12 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
-  gem 'sqlite3'
   gem 'rspec-rails', '~> 2.11'
-  gem 'pry', '~> 0.9'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'launchy'
+  gem 'pry-debugger'
+  gem 'letter_opener'
 end
 
 group :test do

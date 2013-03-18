@@ -3,34 +3,19 @@ class TasksController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @tasks = current_user.tasks.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @tasks }
-    end
+    @tasks = Task.all
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
     @task = Task.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @task }
-    end
   end
 
   # GET /tasks/new
   # GET /tasks/new.json
   def new
     @task = Task.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @task }
-    end
   end
 
   # GET /tasks/1/edit
@@ -46,11 +31,9 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.save
         format.html { redirect_to @task, notice: 'Your task has been created.' }
-        format.json { render json: @task, status: :created, location: @task }
       else
         flash[:alert] = "Your task was not created."
         format.html { render action: "new" }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -63,10 +46,9 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.update_attributes(params[:task])
         format.html { redirect_to @task, notice: 'Your task has been updated.' }
-        format.json { head :no_content }
       else
+        flash[:alert] = "Your task was not updated."
         format.html { render action: "edit" }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -78,8 +60,7 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to tasks_url }
-      format.json { head :no_content }
+      format.html { redirect_to tasks_url, alert: 'Your task has been deleted.' }
     end
   end
 end

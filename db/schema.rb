@@ -11,7 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20130311054305) do
 
   create_table "tasks", :force => true do |t|
@@ -20,9 +19,8 @@ ActiveRecord::Schema.define(:version => 20130311054305) do
     t.integer  "priority"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
     t.integer  "user_id"
-
+  end
 
   add_index "tasks", ["user_id"], :name => "index_tasks_on_user_id"
 

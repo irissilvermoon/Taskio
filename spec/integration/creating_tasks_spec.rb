@@ -11,9 +11,7 @@ feature "Creating Tasks" do
     message = "You need to sign in or sign up before continuing."
     page.should have_content(message)
 
-    fill_in "Email", :with => "example@taskio.com"
-    fill_in "Password", :with => "password"
-    click_button "Sign in"
+    sign_in_as!(user)
     page.should have_content("New Task")
     click_link "New Task"
   end
@@ -23,9 +21,6 @@ feature "Creating Tasks" do
     fill_in "Description", with: "Upstairs cleaning"
     click_button "Create Task"
     page.should have_content("Your task has been created.")
-    within("#task #author") do
-      page.should have_content("Created by example@taskio.com")
-    end
   end
 
   scenario "don't create an empty task" do
