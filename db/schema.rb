@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130318004821) do
+ActiveRecord::Schema.define(:version => 20130318233437) do
 
   create_table "task_list_memberships", :force => true do |t|
     t.integer  "task_list_id"
@@ -31,10 +31,11 @@ ActiveRecord::Schema.define(:version => 20130318004821) do
     t.string   "title"
     t.text     "description"
     t.integer  "priority"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "user_id"
     t.string   "ancestry"
+    t.integer  "task_list_id"
   end
 
   add_index "tasks", ["ancestry"], :name => "index_tasks_on_ancestry"

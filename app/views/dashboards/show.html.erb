@@ -4,7 +4,7 @@
 
 <ul>
   <% current_user.task_lists.each do |t| %>
-    <li><%= t.name %></li>
+    <li><%= link_to t.name, task_list_tasks_path(t) %></li>
   <% end %>
 </ul>
 

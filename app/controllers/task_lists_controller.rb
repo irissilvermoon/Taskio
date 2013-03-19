@@ -4,6 +4,10 @@ class TaskListsController < ApplicationController
     @task_list = current_user.task_lists.build
   end
 
+  def index
+
+  end
+
   def create
     @task_list = current_user.task_lists.create(params[:task_list])
 
