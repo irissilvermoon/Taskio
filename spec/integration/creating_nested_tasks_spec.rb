@@ -5,11 +5,19 @@ feature "Creating Nested Tasks" do
 
   before do
     sign_in_as!(user)
-    visit '/tasks'
+    visit '/'
+    click_link "Create Task List"
+    fill_in 'Name', :with => "My New Task list"
+    click_button 'Create Task list'
+    click_link "My New Task list"
+
     click_link "New Task"
-    fill_in "Title", :with => "Clean the House"
-    fill_in "Description", :with => "let's get this house clean"
+    fill_in "Title", with: "Clean the house"
+    fill_in "Description", with: "Upstairs cleaning"
+
     click_button "Create Task"
+    page.should have_content("Your task has been created.")
+    click_link "Clean the house"
   end
 
   scenario "create a nested task" do
@@ -19,15 +27,6 @@ feature "Creating Nested Tasks" do
     click_button "Create Task"
     page.should have_content("Your task has been created.")
   end
-
-  # scenario "nested tasks display on show" do
-  #   fill_in "Title", with: "Clean the kitchen"
-  #   click_button "Create Task"
-  #   visit '/tasks'
-  #   click_link "Clean the house"
-  #   page.should have_content("Clean the kitchen")
-  # end
-
 
   scenario "users can't create an empty task" do
     click_link "Subtask"
