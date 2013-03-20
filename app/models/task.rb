@@ -8,4 +8,14 @@ class Task < ActiveRecord::Base
   belongs_to :user
 
   belongs_to :task_list
+
+  def priority_string
+    if :priority == 1
+      "High"
+    elsif :priority == 2
+      "Medium"
+    else
+      "Low"
+    end
+  end
 end
