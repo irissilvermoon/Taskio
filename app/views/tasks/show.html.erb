@@ -7,7 +7,7 @@
   </li>
   <li>
     <b>Priority:</b>
-    <%= @task.priority %>
+    <%= @task.priority_string %>
   </li>
   <div class="actions">
     <%= link_to 'Create Subtask', new_task_subtask_path(@task) %> |
@@ -22,7 +22,7 @@
       <% @task.subtasks.each do |subtask| %>
           <h4><%= link_to subtask.title, [@task, subtask] %></h4>
         <li><b>Description: </b><%= subtask.description %></li>
-        <li><b>Priority: </b><%= subtask.priority %></li>
+        <li><b>Priority: </b><%= subtask.priority_string %></li>
       </br>
       <div class="actions">
     <%= link_to 'Edit', edit_task_subtask_path(@task, subtask) %> |

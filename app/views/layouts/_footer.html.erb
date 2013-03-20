@@ -1,4 +1,9 @@
 <footer>
   <nav>
+    <div class="container">
+      <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>
+      <% end %>
+    </div>
   </nav>
 </footer>

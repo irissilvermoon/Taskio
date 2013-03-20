@@ -10,15 +10,6 @@
 
 <%= render 'layouts/header' %>
   <div class="container">
-    <nav>
-      <% if user_signed_in? %>
-          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-          <li><%= link_to "Invite User", new_user_invitation_path %></li>
-        <% else %>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
-      <% end %>
-    </nav>
 
     <% flash.each do |key, value| %>
       <div class='flash' id='<% key %>'>
@@ -29,15 +20,6 @@
 
     <%= render 'layouts/footer' %>
   </div>
-
-
-  <footer>
-    <div class="container">
-      <% if user_signed_in? %>
-          Signed in as <%= current_user.email %>
-      <% end %>
-    </div>
-  </footer>
 
 </body>
 </html>

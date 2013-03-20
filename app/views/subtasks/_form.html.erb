@@ -10,7 +10,7 @@
   </div>
   <div class="field">
     <%= f.label :priority %><br />
-    <%= f.number_field :priority %>
+    <%= f.select(:priority, [["High", 1], ["Medium", 2], ["Low", 3]]) %>
   </div>
   <div class="actions">
     <%= f.submit %>

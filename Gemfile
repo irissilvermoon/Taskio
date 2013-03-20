@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '~> 3.2.11'
 gem 'devise', '~> 2.2'
 gem 'devise_invitable', '~> 1.1.0'
 gem 'dynamic_form', '1.1.4'
@@ -37,6 +37,8 @@ group :test, :development do
   gem 'letter_opener'
   gem 'sqlite3'
   gem 'pry', '~> 0.9'
+  gem 'simplecov', :require => false
+
 end
 
 group :test do
