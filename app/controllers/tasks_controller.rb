@@ -4,7 +4,8 @@ class TasksController < ApplicationController
   before_filter :find_task_list
 
   def index
-    @tasks = @task_list.tasks.all
+    @tasks = Task.scoped
+    @tasks = @task_list.tasks
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,7 +27,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.json
   def new
-    @task = @task_list.tasks.build(params[:task]){ |task| task.user = current_user }
+    @task = @task_list.tasks.build(:parent_id => params[:parent_id]) { |task| task.user = current_user }
 
     respond_to do |format|
       format.html # new.html.erb

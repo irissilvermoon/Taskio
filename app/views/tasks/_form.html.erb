@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <%= f.hidden_field :parent_id %>
+
 
   <div class="field">
     <%= f.label :title %><br />
@@ -29,6 +29,8 @@
     <%= f.label :created_at %><br />
     <%= f.datetime_select :created_at %>
   </div>
+  <%= f.hidden_field :parent_id, :value => params[:parent_id] if params[:parent_id] %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

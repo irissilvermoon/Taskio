@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Task do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "ancestry" do
+
+    it "should be able to create a new subtask" do
+      task = Factory(:task)
+      subtask = task.children.create(:title => "Title", :description => "a description")
+      task.children.should include(subtask)
+    end
+  end
 end
