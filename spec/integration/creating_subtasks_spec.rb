@@ -13,7 +13,7 @@ feature "Creating Subtasks" do
       fill_in "Description", with: "really scrub it!"
       click_button "Create Subtask"
       page.should have_content("Subtask has been created.")
-      visit '/'
+      visit '/tasks'
       page.should have_content("Clean the bathroom")
   end
 
