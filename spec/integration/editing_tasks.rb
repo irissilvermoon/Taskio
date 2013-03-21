@@ -4,7 +4,7 @@ feature "Editing Tasks" do
   before do
     sign_in_as!(Factory(:confirmed_user))
     Factory(:task, title: "House Cleaning")
-    visit '/'
+    visit '/tasks'
     # click_link "House Cleaning"
     click_link "Edit"
   end

@@ -6,7 +6,7 @@ feature "Viewing Tasks" do
     Factory(:task, :title => "House Cleaning")
     user = Factory(:confirmed_user, :email => "example@taskio.com")
     sign_in_as!(user)
-    visit '/'
+    visit '/tasks'
   end
 
   scenario "Should see a task after sign in" do

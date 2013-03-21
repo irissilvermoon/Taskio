@@ -7,7 +7,7 @@ feature "deleting tasks" do
   end
 
   scenario "deleting a task" do
-    visit '/'
+    visit '/tasks'
     click_link "Delete"
     page.should have_content("Your task has been deleted.")
   end

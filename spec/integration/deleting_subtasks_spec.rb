@@ -8,7 +8,7 @@ feature "deleting subtasks" do
 
   before do
     sign_in_as!(user)
-    visit '/'
+    visit '/tasks'
   end
 
   scenario "deleting a subtask" do

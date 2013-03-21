@@ -9,7 +9,7 @@ feature "viewing subtasks" do
 
   before do
     sign_in_as!(user)
-    visit '/'
+    visit '/tasks'
   end
 
   scenario "view a subtask from a task" do

@@ -5,7 +5,7 @@ feature "Creating Subtasks" do
       Factory(:task, :title => "House Cleaning")
       user = Factory(:confirmed_user)
       sign_in_as!(user)
-      visit '/'
+      visit '/tasks'
     end
   scenario "create a subtask" do
       click_link "Create Subtask"

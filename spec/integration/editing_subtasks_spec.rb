@@ -9,7 +9,7 @@ feature "editing subtasks" do
 
   before do
     sign_in_as!(user)
-    visit '/'
+    visit '/tasks'
   end
 
   scenario "edit a subtask" do
