@@ -5,8 +5,6 @@ class Task < ActiveRecord::Base
 
   has_many :subtasks
 
-  belongs_to :user
-
   belongs_to :task_list
 
   def priority_string

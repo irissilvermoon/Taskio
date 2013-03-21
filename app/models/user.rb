@@ -9,8 +9,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :task_list_memberships
-  has_many :task_lists, :through => :task_list_memberships, :inverse_of => :users
-  has_many :tasks
-
+  has_many :task_lists, :through => :task_list_memberships
   # attr_accessible :title, :body
 end
