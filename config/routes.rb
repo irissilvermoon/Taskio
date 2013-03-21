@@ -9,7 +9,7 @@ Taskio::Application.routes.draw do
   resources :tasks do
     resources :subtasks
   end
-  resources :task_lists
+  resources :groups
 
 
   # The priority is based upon order of creation:
