@@ -5,7 +5,7 @@ class Task < ActiveRecord::Base
 
   has_many :subtasks
 
-  belongs_to :task_list
+  belongs_to :group
 
   def priority_string
     if :priority == 1
