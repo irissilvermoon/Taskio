@@ -1,10 +1,6 @@
 <h3> Welcome, <%= current_user.email %></h3>
+<h2>Check out your groups!</h2>
+<%= render partial: "groups/group_list" %>
 
-<%= link_to "Create Task List", new_task_list_path %>
-
-<ul>
-  <% current_user.task_lists.each do |t| %>
-    <li><%= t.name %></li>
-  <% end %>
-</ul>
+<%= link_to "Create Group", new_group_path %>
 
